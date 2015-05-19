@@ -622,6 +622,13 @@ public class OBJExportWindow extends JFrame implements ProgressCallback{
 			
 		});
 		
+		btnForceStop.addActionListener(new AbstractAction() {			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				stop = true;				
+			}
+		});
+		
 		cboxTexScale.addActionListener(genericSaveAction);
 		chckbxSeparateAlphaTexture.addActionListener(genericSaveAction);
 		chckbxCombineAllTextures.addActionListener(genericSaveAction);

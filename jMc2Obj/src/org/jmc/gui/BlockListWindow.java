@@ -314,7 +314,7 @@ public class BlockListWindow extends JFrame{
 	}
 
 	
-	private void toggleSelectedItem(){
+/*	private void toggleSelectedItem(){
 	    int index = labelList.getSelectedIndex();
 
 	    if (index >= 0){
@@ -323,6 +323,7 @@ public class BlockListWindow extends JFrame{
 	      labelList.repaint(labelList.getCellBounds(index, index));
 	    }
 	}
+*/
 	
 	
 	private class CheckListItem{
@@ -333,7 +334,6 @@ public class BlockListWindow extends JFrame{
 		  this.item = item;
 		}
 		
-		@SuppressWarnings("unused")
 		public Object getItem(){
 		  return item;
 		}
@@ -355,6 +355,7 @@ public class BlockListWindow extends JFrame{
 	
 	@SuppressWarnings("serial")
 	private class CheckBoxListRenderer extends JCheckBox implements ListCellRenderer<Object>{
+		@SuppressWarnings("rawtypes")
 		public Component getListCellRendererComponent(JList comp, Object value, int index, boolean isSelected, boolean hasFocus){
 		    setEnabled(comp.isEnabled());
 		    setSelected(((CheckListItem) value).isSelected());
