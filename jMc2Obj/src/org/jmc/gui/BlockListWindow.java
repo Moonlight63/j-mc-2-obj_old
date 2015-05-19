@@ -70,7 +70,7 @@ public class BlockListWindow extends JFrame{
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				selectItem(e.getPoint());
-				saveList("CurSelection");
+				//saveList("CurSelection");
 			}
 		});
 		
