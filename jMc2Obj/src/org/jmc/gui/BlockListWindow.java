@@ -70,7 +70,7 @@ public class BlockListWindow extends JFrame{
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				selectItem(e.getPoint());
-				//saveList("CurSelection");
+				saveList("CurSelection");
 			}
 		});
 		
@@ -183,6 +183,7 @@ public class BlockListWindow extends JFrame{
 		}
 		updateListings();
 		loadList("CurSelection");
+		MainWindow.log("Inisalizing Blocks");
 	}
 	
 	DefaultListModel<CheckListItem> dlm = new DefaultListModel<>();
@@ -200,9 +201,11 @@ public class BlockListWindow extends JFrame{
 		
 	public void saveList(String group){
 		
-		File confFile = new File(Filesystem.getDatafilesDir(), "data/blockselection.dat");
+		File confFile = new File(Filesystem.getDatafilesDir(), "conf/blockselection.dat");
 		MainWindow.log("Saving BlockList: " + group);
-			
+		
+		MainWindow.log(Filesystem.getDatafilesDir().toString());
+		
 		try {
 			
 			TAG_Compound root;
@@ -246,7 +249,7 @@ public class BlockListWindow extends JFrame{
 	
 	public void loadList(String group){
 		
-		File confFile = new File(Filesystem.getDatafilesDir(), "data/blockselection.dat");
+		File confFile = new File(Filesystem.getDatafilesDir(), "conf/blockselection.dat");
 			
 		try {
 			
