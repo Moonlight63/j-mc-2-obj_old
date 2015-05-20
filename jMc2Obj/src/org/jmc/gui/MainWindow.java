@@ -43,7 +43,7 @@ public class MainWindow extends JFrame
 	
 	public static GUIConsoleLog consoleLog;
 	
-	public static OBJExportWindow export;
+	public static ExportWindow export;
 	
 	
 	/**
@@ -58,7 +58,7 @@ public class MainWindow extends JFrame
 		file_names = new FileNames();
 		blocksWindow = new BlockListWindow();
 		consoleLog = new GUIConsoleLog();
-		export = new OBJExportWindow();
+		export = new ExportWindow();
 		
 		main = this;
 		
